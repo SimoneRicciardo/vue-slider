@@ -35,7 +35,7 @@ const app = new Vue({
     },
     methods: {
             next(){
-                if(this.urlVisible == (urlVisible = 4)){
+                if(this.urlVisible == (this.images.length - 1)){
                     this.urlVisible = 0;
                 } else {
                     this.urlVisible ++;
@@ -43,7 +43,7 @@ const app = new Vue({
             },
             prev(){
                 if(this.urlVisible == 0){
-                    this.urlVisible = (this.urlVisible = 4);
+                    this.urlVisible = (this.images.length - 1);
                     
                 } else {
                     this.urlVisible --;
