@@ -34,6 +34,20 @@ const app = new Vue({
         ]
     },
     methods: {
-        
+            next(){
+                if(this.urlVisible == (urlVisible = 4)){
+                    this.urlVisible = 0;
+                } else {
+                    this.urlVisible ++;
+                }
+            },
+            prev(){
+                if(this.urlVisible == 0){
+                    this.urlVisible = (this.urlVisible = 4);
+                    
+                } else {
+                    this.urlVisible --;
+                }
+            }
         }
-    })
+})
